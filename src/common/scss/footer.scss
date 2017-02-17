@@ -1,0 +1,23 @@
+.footer_pointer{
+    width:100%;
+    display: flex;  
+    justify-content: space-around;      
+    height: 1rem;
+    position: fixed;
+    bottom: 0;       
+    color:#b6b6b3;
+    padding-left: 0; 
+    border-top: 0.05rem solid #ccc;
+    span{
+        font-size: 0.6rem;
+    }  
+    p{
+        font-size: 0.4rem;
+        margin-top: 0;
+    }
+    a{
+        color:#b6b6b3;
+    }  
+}
+
+

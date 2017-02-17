@@ -1,6 +1,33 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+   <div id="app">   	
+    <footer>
+    	<ul class="footer_pointer">
+    		<li>
+    			<a href="#/">
+    			<span class="glyphicon glyphicon-home"></span>
+    		  <p class="footer_font">首页</p>
+    		  </a>
+    		</li>
+    		<li>
+    			<a href="#/read">
+    			<span class="glyphicon glyphicon-book"></span>
+    		  <p class="footer_font">阅读</p>
+    		</li>
+    		  </a>
+    		<li>
+    			<a href="#/music">
+    			<span class="glyphicon glyphicon-music"></span>
+    		  <p class="footer_font">音乐</p>
+    		  </a>
+    		</li>
+    		<li>
+    			<a href="#/film">
+    			<span class="glyphicon glyphicon-film"></span>
+    		  <p class="footer_font">影视</p>
+    		  </a>
+    		</li>
+    	</ul>
+    </footer>
     <router-view></router-view>
   </div>
 </template>
@@ -11,13 +38,7 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import './common/scss/footer.scss';
+
 </style>

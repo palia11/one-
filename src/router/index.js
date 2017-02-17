@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from 'components/Hello'
-
+import Header from 'components/header'
+import Read from 'components/read'
+import Music from 'components/music'
+import Film from 'components/film'
 Vue.use(Router)
 
 export default new Router({
@@ -9,7 +11,19 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: Hello
+      component: Header
+    },
+    {
+      path: '/read',
+      component: Read
+    },
+    {
+      path: '/music',
+      component: Music
+    },
+    {
+      path: '/film',
+      component: Film
     }
   ]
 })

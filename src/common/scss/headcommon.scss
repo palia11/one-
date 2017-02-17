@@ -1,0 +1,18 @@
+.header_head{
+        width: 100%;
+        position: fixed;
+        top:0.3rem;
+        padding-bottom: 0.2rem;
+        display: flex;
+        border-bottom: 0.05rem solid #ccc;
+        justify-content: space-between;
+        font-size: 0.5rem;
+        div{
+            margin-right: 5%;
+        }
+        span{
+            color:#b6b6b3;
+            letter-spacing: 0.05rem;
+        }   
+    }
+    
