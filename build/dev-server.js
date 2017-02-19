@@ -23,6 +23,25 @@ var autoOpenBrowser = !!config.dev.autoOpenBrowser
 var proxyTable = config.dev.proxyTable
 
 var app = express()
+var appData = require('../data/onetuwen.json');
+var appData2 = require('../data/oneyuedu.json');
+var tuwendata = appData.data;
+var yuedudata = appData2.data;
+//console.log(tuwendata)
+var apiRoutes = express.Router();
+apiRoutes.get('/tuwenData',function(req,res){
+	res.json({
+		errno:0,
+		data:tuwendata
+	});
+});
+apiRoutes.get('/yueduData',function(req,res){
+	res.json({
+		errno:0,
+		data:yuedudata
+	});
+});
+app.use('/api',apiRoutes)
 var compiler = webpack(webpackConfig)
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {

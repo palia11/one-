@@ -2,21 +2,31 @@
     width:100%;
     display: flex;  
     justify-content: space-around;      
-    height: 1rem;
+    height:2rem;
     position: fixed;
-    bottom: 0;       
+    bottom: -1rem;       
     color:#b6b6b3;
     padding-left: 0; 
+    background: #fff;
     border-top: 0.05rem solid #ccc;
+    li{
+         background: #fff;
+    }
     span{
         font-size: 0.6rem;
     }  
     p{
-        font-size: 0.4rem;
+        font-size: 0.4rem;width: 100%;
         margin-top: 0;
-    }
+    } 
     a{
+       color:#b6b6b3;
+    }   
+    .a_color{
         color:#b6b6b3;
+    }
+    .active{
+        color:#646464;
     }  
 }
 
