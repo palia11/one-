@@ -13,13 +13,13 @@
   		<div class="read_firstdiv">
   			<p>-  阅读   -</p>
   			<p>{{readdata.title}}</p>
-  			<p>文  / {{readdata.user_name}}</p>
+  			<p>文  / {{readdata.author.user_name}}</p>
   		</div>
   		<div><img :src="readdata.img_url"/></div>
   		<div class="read_secondfont">
   			<p>{{readdata.forward}}</p>
   			<p>{{readdata.date}}</p>
-  			
+  			<!--<p>{{readdata.date}}</p>-->
   		</div>  		
   	</div>
   </div>
@@ -78,6 +78,11 @@ export default {
  				color: #777;
  			}
  		p:nth-child(2){
+ 				font-size:0.35rem;
+ 				color: #555;
+ 				text-align: center;
+ 			} 	
+ 			p:nth-child(3){
  				font-size:0.35rem;
  				color: #555;
  				text-align: center;

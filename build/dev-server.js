@@ -25,9 +25,13 @@ var proxyTable = config.dev.proxyTable
 var app = express()
 var appData = require('../data/onetuwen.json');
 var appData2 = require('../data/oneyuedu.json');
+var appData3 = require('../data/oneyinyue.json');
+var appData4 = require('../data/oneyingshi.json');
 var tuwendata = appData.data;
 var yuedudata = appData2.data;
-//console.log(tuwendata)
+var yinyuedata = appData3.data;
+var yingshidata = appData4.data;
+//console.log(yinyuedata)
 var apiRoutes = express.Router();
 apiRoutes.get('/tuwenData',function(req,res){
 	res.json({
@@ -39,6 +43,18 @@ apiRoutes.get('/yueduData',function(req,res){
 	res.json({
 		errno:0,
 		data:yuedudata
+	});
+});
+apiRoutes.get('/yinyueData',function(req,res){
+	res.json({
+		errno:0,
+		data:yinyuedata
+	});
+});
+apiRoutes.get('/yingshiData',function(req,res){
+	res.json({
+		errno:0,
+		data:yingshidata
 	});
 });
 app.use('/api',apiRoutes)
