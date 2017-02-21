@@ -18,20 +18,14 @@
   <!--获取数据-->
   <div class="film_ul">
   	<div v-for='filmdata in filmData' style="border-bottom:3px #eee solid;">
-  		
-  		<a href="#/filminit" class="film_init">
-  		<div class="film_firstdiv">
-  			<p>-  影视   -</p>
-  			<p>{{filmdata.title}}</p>
-  			<p>文  / {{filmdata.author.user_name}}</p>
-  		</div>
-  		<div><img :src="filmdata.img_url"/></div>
+  			
+  		<div><img :src="filmdata.share_info.image"/></div>
   		<div class="film_secondfont">
-  			<p>{{filmdata.forward}}</p>
+  			<p>{{filmdata.title}}</p>
   			<p>——《{{filmdata.subtitle}}》</p>
-  			<p>{{filmdata.data}}</p>
+  			<p>{{filmdata.share_info.content}}</p>
   		</div>
-  		</a>
+  		
   	</div>
   </div>
 </div>
@@ -66,40 +60,22 @@ export default {
  				width: 100%;
  			}
  	}
- 	.film_firstdiv{ 			
- 			
- 			p:nth-child(1){
- 				font-size:0.4rem;
- 				color: #666;
- 				text-align: center;	
- 			}
- 			p:nth-child(2){
- 				font-size:0.55rem;
- 				text-indent: 0.3rem;
- 			}
- 			p:nth-child(3){
- 				font-size:0.4rem;
- 				text-indent: 0.3rem;
- 			}
- 			 	}
+ 	
  	.film_secondfont{
  		p:nth-child(1){
- 				font-size:0.35rem;
- 				text-align: center;
- 				color: #777;
+ 				font-size:0.8rem;
+ 				text-indent: 0.5rem;
+ 				color: #000;
  			}
  		p:nth-child(2){
  				font-size:0.35rem;
  				color: #555;
- 				text-align: right;
+ 				text-indent: 0.5rem;
  			} 	
  			p:nth-child(3){
- 				font-size:0.35rem;
+ 				font-size:0.45rem;
  				color: #555;
  				text-align: center;
  			} 			
- 	}
- 	.film_init{
- 		color: #000;
  	}
 </style>

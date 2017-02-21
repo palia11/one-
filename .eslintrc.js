@@ -1,7 +1,7 @@
 // http://eslint.org/docs/user-guide/configuring
 
 module.exports = {
-  root: false,
+  root: true,
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module'
@@ -23,5 +23,8 @@ module.exports = {
     'generator-star-spacing': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+  },
+  'globals': {
+  	'Swiper': true
   }
 }
